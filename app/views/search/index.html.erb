@@ -16,7 +16,7 @@
 <tr>
 <td><%= link_to book.title, book%></td>
 <td><%= book.author.truncate_words(25) %></td>
-<td><%= book.discription.truncate_words(25) %></td>
+<td><%= book.discription.to_plain_text.truncate_words(25) %></td>
 <td><%= link_to book.user.name, book.user %></td>
 </tr>
 <% end %>
