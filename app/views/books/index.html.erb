@@ -1,3 +1,5 @@
+
+<% if current_user %>
 <p style="color: green"><%= notice %></p>
 <div class="container">
 <h1>Books</h1>
@@ -6,11 +8,15 @@
   <% @books.each do |book| %>
     <%= render book %>
     <p>
-      <%= link_to "Show this book", book %>
+      
+      <%= link_to "Show this Book", book, class: "btn btn-secondary" %>
     </p>
    
   <% end %>
 </div>
 
-<%= link_to "New book", new_book_path %>
+<%= link_to "New Book", new_book_path, class: "btn btn-success" %>
 </div>
+<%else %>
+<h5> Please log in to view Books</h5>
+<% end %>
