@@ -1,9 +1,19 @@
+<center>
 <div class="container">
-<h1>This is my bookshop application</h1>
-
-<p>This is made by Jimbo the great</p>
+<h1>Welcome to my Book Library Application!</h1>
+<p>Please use the above NavBar to Navigate the Website</p>
 <%= link_to "About me", about_path, class: "btn btn-secondary" %>
 <%= link_to "Contact", contact_path, class: "btn btn-secondary" %>
 <%= link_to "Books", books_path, class: "btn btn-primary" %>
+</center>
+<br>
+<br>
+<center>
+<h5><strong>Below is a random joke that is got from an API every time the page opens!</strong></h5>
+ <% @random_fact.each do |facts| %>
+    <%= facts %></p>
+    <% end %>
+    <%= link_to "New Joke!", root_path, class: "btn btn-primary" %>
+    <center>
 
 </div>

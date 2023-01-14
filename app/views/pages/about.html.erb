@@ -1,4 +1,20 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
-<%= link_to "home", root_path %>
-<%= link_to "contact", contact_path %>
+<center>
+<div class="container">
+<h1>About Me!</h1>
+<p>My name is James Butler. My student number is x20129211. I am a 
+Fourth year student at NCI specialising in Software Development.</p>
+<%= link_to "About me", about_path, class: "btn btn-secondary" %>
+<%= link_to "Contact", contact_path, class: "btn btn-secondary" %>
+<%= link_to "Books", books_path, class: "btn btn-primary" %>
+</center>
+
+<br>
+<br>
+<center>
+<h5><strong>Below is a random piece of advice that is got from an API every time the page opens!</strong></h5>
+ <% @random_advice.each do |advice| %>
+    <%= advice %></p>
+    <% end %>
+    <%= link_to "New Advice!", about_path, class: "btn btn-primary" %>
+    <center>
+</div>
