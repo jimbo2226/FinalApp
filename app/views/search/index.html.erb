@@ -1,3 +1,4 @@
+<% if current_user %>
 <h1 class="text-center"><%= pluralize(@books.count, "Result") %></h1>
 
 <div class ="container">
@@ -22,4 +23,7 @@
 <% end %>
 </tbody>
 </table>
+<%else %>
+<h5> Please log in to Search Books</h5>
+<% end %>
 </div>
